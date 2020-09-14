@@ -6,4 +6,4 @@ from twitteruserapp.models import TwitterUser
 class Notification(models.Model):
     receiver = models.ForeignKey(TwitterUser, on_delete=models.CASCADE, related_name="receive")
     tweet = models.ForeignKey(Tweet, on_delete=models.CASCADE, related_name="tweet_received")
-    viewed_at = models.DateTimeField(default=None, blank=True, null=True)
+    status = models.BooleanField(default=False)

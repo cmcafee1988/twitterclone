@@ -5,3 +5,4 @@ from django.contrib.auth.models import AbstractUser
 
 class TwitterUser(AbstractUser):
     following = models.ManyToManyField('self', related_name="user_following", symmetrical=False)
+    display_name = models.CharField(max_length=50, null=True, blank=True)

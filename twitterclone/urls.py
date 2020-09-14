@@ -31,6 +31,6 @@ urlpatterns = [
     path('unfollow/', twitter_user_views.unfollow_view),
     path('tweet/', tweet_views.tweet_view),
     path('create/', tweet_views.create_tweet),
-    path('notification/', notification_views.notification_view),
+    path('notification/', notification_views.notifications),
     path('admin/', admin.site.urls),
 ]
